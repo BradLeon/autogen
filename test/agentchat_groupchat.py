@@ -13,9 +13,6 @@ config_list = config_list_from_json(env_or_file="OAI_CONFIG_LIST", filter_dict={
 
 llm_config = {"config_list": config_list, "cache_seed": 42}
 
-llm_config = {
-    "config_list": [{"model": "gpt-3.5-turbo", "api_key": "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"}],
-}
 
 user_proxy = UserProxyAgent(
     name="User_proxy",
