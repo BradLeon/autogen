@@ -7,7 +7,6 @@ config_list = config_list_from_json(env_or_file="OAI_CONFIG_LIST",)
 
 llm_config = {"config_list": config_list, "cache_seed": 42}
 
-APIKEY="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"
 
 student_agent = ConversableAgent(
     name="Student_Agent",

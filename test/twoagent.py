@@ -3,10 +3,6 @@ import openai
 
 import os
 
-llm_config = {
-    "config_list": [{"model": "gpt-3.5-turbo", "api_key": "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"}],
-}
-
 
 # Load LLM inference endpoints from an env variable or a file
 # See https://microsoft.github.io/autogen/docs/FAQ#set-your-api-endpoints

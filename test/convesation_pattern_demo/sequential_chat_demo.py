@@ -9,8 +9,6 @@ config_list = config_list_from_json(env_or_file="OAI_CONFIG_LIST",)
 
 llm_config = {"config_list": config_list, "cache_seed": 42}
 
-APIKEY="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"
-
 number_agent = ConversableAgent(
     name="Number_Agent",
     system_message="You return me the numbers I give you, one number each line.",
@@ -41,7 +39,7 @@ multiplier_agent = ConversableAgent(
 subtracter_agent = ConversableAgent(
     name="Subtracter_Agent",
     system_message="You subtract 1 from each number I give you and return me the new numbers, one number each line.",
-    llm_config={"config_list": [{"model": "gpt-4", "api_key": APIKEY}]},
+    llm_config={"config_list": config_list},
     human_input_mode="NEVER",
     max_consecutive_auto_reply = 5,
 )
@@ -50,7 +48,7 @@ subtracter_agent = ConversableAgent(
 divider_agent = ConversableAgent(
     name="Divider_Agent",
     system_message="You divide each number I give you by 2 and return me the new numbers, one number each line.",
-    llm_config={"config_list": [{"model": "gpt-4", "api_key": APIKEY}]},
+    llm_config={"config_list": config_list},
     human_input_mode="NEVER",
     max_consecutive_auto_reply = 5,
 )
